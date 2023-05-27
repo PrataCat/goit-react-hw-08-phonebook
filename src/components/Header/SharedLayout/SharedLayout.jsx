@@ -2,9 +2,9 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Container, Header } from './SharedLayout.styled';
 import Loader from 'components/Loader';
-import { Navigation } from 'components/Navigation/Navigation';
-import AuthNav from 'components/AuthNav/AuthNav';
-import { UserMenu } from 'components/UserMenu/UserMenu';
+import { Navigation } from 'components/Header/Navigation/Navigation';
+import AuthNav from 'components/Header/AuthNav/AuthNav';
+import { UserMenu } from 'components/Header/UserMenu/UserMenu';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
 

@@ -1,8 +1,10 @@
+import { StyledLink, Title } from './HomePage.styled';
+
 const HomePage = () => {
   return (
-    <h1>
-      Wellcome to the <span>CONTACTS APP</span>
-    </h1>
+    <Title>
+      Wellcome to the <StyledLink to="/contacts">My Contacts </StyledLink>app
+    </Title>
   );
 };
 
