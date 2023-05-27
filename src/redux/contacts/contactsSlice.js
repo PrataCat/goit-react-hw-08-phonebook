@@ -54,6 +54,7 @@ const contactsSlice = createSlice({
       state.filter = action.payload;
     },
   },
+
   extraReducers: builder => {
     builder
       .addCase(fetchContacts.pending, handlePending)
