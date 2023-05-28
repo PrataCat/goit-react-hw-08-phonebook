@@ -1,8 +1,4 @@
-import {
-  configureStore,
-  getDefaultMiddleware,
-  // combineReducers,
-} from '@reduxjs/toolkit';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { contactsReducer } from './contacts/contactsSlice';
 import { authReducer } from './auth/authSlise';
 import {
@@ -31,23 +27,6 @@ export const authPersistConfig = {
   whitelist: ['token'],
 };
 
-// const appReducer = combineReducers({
-//   auth: persistReducer(authPersistConfig, authReducer),
-//   contacts: contactsReducer,
-//   filter: contactsReducer,
-// });
-
-// const rootReducer = (state, action) => {
-//   if (action.type === 'auth/logout/fulfilled') {
-//     return appReducer(undefined, action);
-//   }
-//   return appReducer(state, action);
-// };
-
-// export const store = configureStore({
-//   reducer: rootReducer,
-//   middleware,
-// });
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),

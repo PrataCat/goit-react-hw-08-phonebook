@@ -1,10 +1,10 @@
-import SignUpForm from 'components/Auth/SignUpForm';
+import SignUpForm from 'components/Auth/SignUpForm/SignUpForm';
 
 const SignUpPage = () => {
   return (
-    <section>
+    <>
       <SignUpForm />
-    </section>
+    </>
   );
 };
 

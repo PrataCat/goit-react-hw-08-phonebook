@@ -4,7 +4,7 @@ import { logOut } from 'redux/auth/operations';
 import { selectUser } from 'redux/auth/selectors';
 import { Wrap, Title, OutLink } from './UserMenu.styled';
 
-export const UserMenu = () => {
+const UserMenu = () => {
   const dispatch = useDispatch();
   const { name } = useSelector(selectUser);
 
@@ -21,3 +21,5 @@ export const UserMenu = () => {
     </Wrap>
   );
 };
+
+export default UserMenu;

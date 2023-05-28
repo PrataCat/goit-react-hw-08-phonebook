@@ -1,11 +1,13 @@
-.form {
+import styled from 'styled-components';
+
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 15px;
-}
+`;
 
-.form-input {
+export const FormInput = styled.input`
   display: block;
   width: 100%;
   height: 30px;
@@ -18,9 +20,9 @@
       var(--accent-color-dark)
     )
     10;
-}
+`;
 
-.form-btn {
+export const FormBtn = styled.button`
   width: 100%;
   height: 30px;
   border: none;
@@ -37,22 +39,22 @@
   font-weight: normal;
   font-size: 14px;
   letter-spacing: 0.08em;
-}
 
-.form-btn:focus {
-  box-shadow: var(--accent-color-dark) 0 0 0 1.5px inset,
-    rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
-    var(--accent-color-dark) 0 -3px 0 inset;
-}
+  :focus {
+    box-shadow: var(--accent-color-dark) 0 0 0 1.5px inset,
+      rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+      var(--accent-color-dark) 0 -3px 0 inset;
+  }
 
-.form-btn:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
-    var(--accent-color-dark) 0 -1px 0 inset;
-  transform: translateY(-1px);
-}
+  :hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+      var(--accent-color-dark) 0 -1px 0 inset;
+    transform: translateY(-1px);
+  }
 
-.form-btn:active {
-  box-shadow: var(--accent-color-dark) 0 3px 7px inset;
-  transform: translateY(1px);
-}
+  :active {
+    box-shadow: var(--accent-color-dark) 0 3px 7px inset;
+    transform: translateY(1px);
+  }
+`;

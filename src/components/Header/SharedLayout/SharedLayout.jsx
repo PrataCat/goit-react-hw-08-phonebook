@@ -4,7 +4,7 @@ import { Container, Header } from './SharedLayout.styled';
 import Loader from 'components/Loader';
 import { Navigation } from 'components/Header/Navigation/Navigation';
 import AuthNav from 'components/Header/AuthNav/AuthNav';
-import { UserMenu } from 'components/Header/UserMenu/UserMenu';
+import UserMenu from 'components/Header/UserMenu/UserMenu';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
 
