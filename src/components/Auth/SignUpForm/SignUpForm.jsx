@@ -2,6 +2,13 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 import { useNavigate } from 'react-router-dom';
+import {
+  Wrap,
+  FormLabel,
+  Form,
+  FormInput,
+  FormButton,
+} from '../AuthForm.styled';
 
 const SignUpForm = () => {
   const [userName, setUserName] = useState('');
@@ -42,36 +49,40 @@ const SignUpForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label>
-        Username
-        <input
-          type="text"
-          name="name"
-          value={userName}
-          onChange={hendleChange}
-        />
-      </label>
-      <label>
-        Email
-        <input
-          type="email"
-          name="email"
-          value={email}
-          onChange={hendleChange}
-        />
-      </label>
-      <label>
-        Password
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={hendleChange}
-        />
-      </label>
-      <button type="submit">Register</button>
-    </form>
+    <Wrap>
+      <Form onSubmit={handleSubmit} autoComplete="off">
+        <FormLabel>
+          Username
+          <FormInput
+            type="text"
+            name="name"
+            value={userName}
+            placeholder="name"
+            onChange={hendleChange}
+          />
+        </FormLabel>
+        <FormLabel>
+          Email
+          <FormInput
+            type="email"
+            name="email"
+            value={email}
+            placeholder="email@domen.com"
+            onChange={hendleChange}
+          />
+        </FormLabel>
+        <FormLabel>
+          Password
+          <FormInput
+            type="password"
+            name="password"
+            value={password}
+            onChange={hendleChange}
+          />
+        </FormLabel>
+        <FormButton type="submit">Register</FormButton>
+      </Form>
+    </Wrap>
   );
 };
 

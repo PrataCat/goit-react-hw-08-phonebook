@@ -2,6 +2,13 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 import { useNavigate } from 'react-router-dom';
+import {
+  Wrap,
+  FormLabel,
+  Form,
+  FormInput,
+  FormButton,
+} from '../AuthForm.styled';
 
 export const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -37,26 +44,29 @@ export const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label>
-        Email
-        <input
-          type="email"
-          name="email"
-          value={email}
-          onChange={hendleChange}
-        />
-      </label>
-      <label>
-        Password
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={hendleChange}
-        />
-      </label>
-      <button type="submit">Log In</button>
-    </form>
+    <Wrap>
+      <Form onSubmit={handleSubmit} autoComplete="off">
+        <FormLabel>
+          Email
+          <FormInput
+            type="email"
+            name="email"
+            value={email}
+            placeholder="email@domen.com"
+            onChange={hendleChange}
+          />
+        </FormLabel>
+        <FormLabel>
+          Password
+          <FormInput
+            type="password"
+            name="password"
+            value={password}
+            onChange={hendleChange}
+          />
+        </FormLabel>
+        <FormButton type="submit">Login</FormButton>
+      </Form>
+    </Wrap>
   );
 };
